@@ -1,0 +1,23 @@
+<html lang='en'>
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="lists content">
+        <% if(lists.length > 0){ %>
+            <% lists.forEach(list => { %>
+                <a class="single" href="/lists/<%= list._id %>">
+                    <h3 class="title">ListName: <%= list.title %></h3>
+                    <!--<p class="body"><%= list.body %></p> -->
+                </a>
+            <% }) %>
+        <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

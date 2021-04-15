@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
+html{
+    background: #2C3E50;
+
+}
+
+body{
+    font-family: 'Antonio', sans-serif;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    color: #EB7347;
+    
+}
+
+p, h1, h2, h3, a,ul{
+    text-decoration: none;
+    color: #EB7347;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom:60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fcf2edef;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+}
+
+nav li{
+    list-style-type: none;
+    margin-left:20px;
+}
+
+nav p, nav a{
+    color: #eb7347bb;
+    font-weight: 300;
+}
+
+footer{
+    color: #eb7347bb;
+    text-align: center;
+    margin: 80px auto 20px;
+}
+
+h1{
+    font-size:40px;
+}
+h2{
+    margin-bottom: 40px;
+}
+
+h3{
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.create-list form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.create-list input,
+.create-list textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+.create-list label{
+    display:block;
+    margin-top: 24px;
+}
+
+textarea{
+    height: 120px;
+}
+
+.create-list button{
+    background:oldlace;
+    color:whight;
+    padding: 6px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+
+}
+
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lists a{
+    display:flex;
+    flex:0 0 26.9%;
+    background-color:#fcf2edef;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 30px;
+    border-radius: 5%;
+    border: 5px solid #eb7347bb;
+    height:100px;
+    font-weight:lighter;
+    font-size:20px;
+    letter-spacing: 5px;
+}
+
+.details{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.contx{
+    flex:0 0 25%;
+    width:200px;
+    height:100px;
+}
+
+.New-video{
+    flex:0 0 90%;
+    width:300px;
+    height:100px;
+}
+
+.videolist{
+    display:inline-flex;
+    justify-content: space-around;
+    flex:0 0 26.9%;
+    width:395px;
+    height:250px;
+}
+.videolist iframe{
+    width:300px;
+    height:225px;
+}
+
+.delete{
+    flex:0 0 5%;
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+}
+
+.delete:hover{
+    cursor: pointer;
+    border: 2px solid #eb7347bb;
+
+}

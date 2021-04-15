@@ -1,0 +1,52 @@
+<html lang='en'>
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="details content">
+        <!--<div class="contx">
+            <h2>ListName: <%= lists.title %></h2>
+            <p>Description: <%= lists.body %></p>
+        </div>
+    -->
+        <div class="New-video">
+            <form action='/lists/<%= lists.id %>' method='POST'>
+                <label for="videoembed">Video Embed</label>
+                <input type="text" id="videoembed" name="videoembed" required>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <a class="delete" data-doc="<%= lists.id %>">delete</a>
+
+        <div class="video">
+            <% if(lists.videoembed.length > 0){ %>
+                <% lists.videoembed.forEach((video,count) => { %>
+                    <div class="videolist"><iframe width="480" height="360" src="https://www.youtube.com/embed/<%= video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <script>
+        const trashcan = document.querySelector('a.delete');
+
+        trashcan.addEventListener('click', (e) =>{
+            const endpoint = `/lists/${trashcan.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: 'DELETE',
+            } )
+            .then(response => response.json())
+            .then(data => window.location.href = data.redirect)
+            .catch(err => console.log(err));
+        });
+    </script>
+    
+</body>
+</html>
